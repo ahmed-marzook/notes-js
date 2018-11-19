@@ -4,7 +4,7 @@
     var list = new NoteList
     note.newNote("this is a note")
     list.storeNote(note.getNote())
-    if (list.notes() !== ["this is a note"]) {
+    if (list.listNotes() !== ["this is a note"]) {
       throw new Error("note not added")
     } else {
       console.log(".")

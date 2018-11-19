@@ -1,10 +1,12 @@
 (function(exports) {
 
   function testHelloWorld() {
-    var helloWorld = new noteModel();
+    var helloWorld = new NoteModel();
 
-    if (circle.hello !== "Hello World!") {
+    if (helloWorld.hello !== "Hello World!") {
       throw new Error("Not Hello world");
+    } else {
+      console.log(".");
     }
   };
 

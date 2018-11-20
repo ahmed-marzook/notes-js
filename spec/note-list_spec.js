@@ -4,11 +4,12 @@
     var list = new NoteList
     note.newNote("this is a note")
     list.storeNote(note.getNote())
-    if (list.listNotes() !== ["this is a note"]) {
-      throw new Error("note not added")
+    var testList = list.listNotes()
+    if (testList[0] !== "this is a note") {
+      throw new Error("note was not added")
     } else {
       console.log(".")
     }
-  }
+  };
   testStoreANote();
 })(this);

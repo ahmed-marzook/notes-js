@@ -19,10 +19,11 @@ function testDisplayList() {
   list.storeNote(note.getNote())
   note.newNote("random note 2")
   list.storeNote(note.getNote())
-  if () {
-
+  var noteViewer = new NoteListView(list.listNotes());
+  if (noteViewer.displayList() !== "<ul><li>random note 1</li><li>random note 2</li></ul>") {
+    throw new Error("List not properly displayed")
   } else {
-
+    console.log(".")
   }
 }
 testListView();

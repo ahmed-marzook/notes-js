@@ -23,6 +23,7 @@
     "hapi": "^17.7.0"
   },
   "devDependencies": {
+    "http-server": "^0.11.1",
     "jasmine-node": "^2.0.1"
   }
 }

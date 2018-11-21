@@ -1,5 +1,4 @@
-
-var _ = require('underscore');
+var _ = require('lodash');
 
 var RunnerMock = function(reporter) {
   this.reporter = reporter;

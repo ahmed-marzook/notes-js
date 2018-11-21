@@ -1,47 +1,43 @@
-
 exports.inject = function(deps) {
 
   deps = deps || {};
   var growl = deps.growl || require('growl'),
       path = require('path');
 
-  var GrowlReporter = function() {
+  function GrowlReporter() {
+  }
+
+  GrowlReporter.prototype.jasmineStarted = function() {
+    this.startedAt = new Date();
+    this.counts = {
+      failed: 0,
+      pending: 0,
+      total: 0
+    };
   };
 
-  GrowlReporter.prototype = {
+  GrowlReporter.prototype.specStarted = function() {
+    this.counts.total++;
+  };
 
-    jasmineStarted: function() {
-      this.startedAt = new Date();
-      this.counts = {
-        failed: 0,
-        pending: 0,
-        total: 0
-      };
-    },
-
-    specStarted: function() {
-      this.counts.total++;
-    },
-
-    specDone: function(spec) {
-      switch (spec.status) {
-        case 'pending':
-          this.counts.pending++;
-          break;
-        case 'failed':
-          this.counts.failed++;
-          break;
-      }
-    },
-
-    jasmineDone: function() {
-
-      growl(growlMessage(this.counts), {
-        name: growlName,
-        title: growlTitle(this.counts, this.startedAt),
-        image: growlImage(this.counts)
-      });
+  GrowlReporter.prototype.specDone = function(spec) {
+    switch (spec.status) {
+      case 'pending':
+        this.counts.pending++;
+        break;
+      case 'failed':
+        this.counts.failed++;
+        break;
     }
+  };
+
+  GrowlReporter.prototype.jasmineDone = function() {
+
+    growl(growlMessage(this.counts), {
+      name: growlName,
+      title: growlTitle(this.counts, this.startedAt),
+      image: growlImage(this.counts)
+    });
   };
 
   var growlName = 'Jasmine',

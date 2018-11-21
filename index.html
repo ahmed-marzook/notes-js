@@ -6,10 +6,21 @@
 <script src="lib/note-list-view.js"></script>
 <script src="spec/note-list-view_spec.js"></script>
 <html>
-  <head>
-    <title>Notes App</title>
-  </head>
-  <body>
-    <div id="app">Hello</div>
-  </body>
+<head>
+  <script>
+  // run this function when the document is loaded
+  window.onload = function() {
+
+    // create a couple of elements in an otherwise empty HTML page
+    var heading = document.createElement("h1");
+    var heading_text = document.createTextNode("Big Head!");
+    heading.appendChild(heading_text);
+    document.body.appendChild(heading);
+  }
+  </script>
+</head>
+<title>Notes App</title>
+<body>
+  <div id="app">Hello</div>
+</body>
 </html>

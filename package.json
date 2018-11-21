@@ -1,0 +1,36 @@
+{
+<<<<<<< HEAD
+  "name": "notes",
+=======
+  "name": "package.json",
+>>>>>>> 3da4b083b61738ccefdec387f4a62f2908df1f21
+  "version": "1.0.0",
+  "description": "Notes app using JS without any other code",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amarzook1/notes-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amarzook1/notes-js/issues"
+  },
+<<<<<<< HEAD
+  "homepage": "https://github.com/amarzook1/notes-js#readme",
+  "dependencies": {
+    "hapi": "^17.7.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.16.2"
+  }
+=======
+  "homepage": "https://github.com/amarzook1/notes-js#readme"
+>>>>>>> 3da4b083b61738ccefdec387f4a62f2908df1f21
+}

@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/amarzook1/notes-js/issues"
   },
-  "homepage": "https://github.com/amarzook1/notes-js#readme"
+  "homepage": "https://github.com/amarzook1/notes-js#readme",
+  "dependencies": {
+    "hapi": "^17.7.0"
+  },
+  "devDependencies": {
+    "jasmine-node": "^2.0.1"
+  }
 }
